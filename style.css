@@ -1,0 +1,366 @@
+body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+h1 {
+  color:rgb(37, 36, 36);
+  margin: 0 0 0.5em 0;
+	font-weight: 100;
+	text-transform: uppercase;
+	font-style: normal;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 50px;
+	line-height: 30px;
+	text-shadow: 2px 5px 0 rgb(255, 255, 255);   
+
+}
+h2 {
+    margin: 0 0 0.5em 0;
+	color: #000000;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 40px;
+	line-height: 42px;
+	text-transform: uppercase lowercase;
+}
+h3 {
+    margin: 0 0 0.5em 0;
+	color: #000000;
+	font-family: 'Ultra', sans-serif;   
+	font-size: 28px;
+	line-height: 30px;
+	text-transform: uppercase lowercase;
+}
+h4 {
+    margin: 0 0 0.5em 0;
+	color: #000000;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+	font-size: 25px;
+	line-height: 19px;
+	text-transform: uppercase lowercase;
+}
+p {
+    font-size:1.2rem;
+  font-family:monospace;
+  line-height:2;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+picture {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left:10%;
+}
+.checked {
+    color: orange;
+  }
+.rating {
+  width: 400px;
+  padding: 30px;
+  margin: 10px auto 0;
+  }
+  .rating .emo {
+  position: absolute;
+  font-family: FontAwesome;
+  color: #fff;
+  font-size: 100px;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  }
+  
+  .fa {
+    padding: 20px;
+    font-size: 20px;
+    width:60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  position: fixed;
+  overflow: hidden;
+}
+
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  margin-left: -40px;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.navbar-scroll {
+	padding: 0;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	transition-duration: 0.6s;
+}
+.nav-dropdown-scroll {
+	box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4);
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: rgb(255, 255, 255);
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: rgb(240, 154, 25);
+  }
+} 
+
+section {
+    height: 100vh;
+    margin-top: 5rem;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  #section1 {
+    box-shadow: 5px 5px 20px rgb(17, 18, 19);
+    align-items: center;
+    text-align: center;
+    background: #dfdddd;
+    
+  }
+    
+  #section2 {
+    background: #f2dd93;
+    box-shadow: 5px 5px 20px rgb(17, 18, 19);
+    align-items: center;
+    text-align: center;
+  }
+    
+  #section3 {
+    background: #a08ef1; 
+    box-shadow: 5px 5px 20px rgb(17, 18, 19);
+    align-items: center;
+    text-align: center;
+  }
+      
+  #section4 {
+    background: #8cf6fa; 
+    box-shadow: 5px 5px 20px rgb(17, 18, 19);
+    align-items: center;
+    text-align: center;
+  }
+  #slider{
+    width:54%;
+    margin:1px auto;
+    position:relative;
+    overflow:hidden;
+    box-shadow:6px 12px 10px 10px rgba(0,0,0,0.4);;
+  }
+  
+  .slide{
+    width:100%; 
+    display:none;
+    animation-name:fade;
+    animation-duration:1s;
+    
+  }
+  @keyframes fade{
+    from{opacity:0.5;}
+    to{opacity:1;}
+  }
+  
+  .controls{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:1.5em;
+    padding:15px 10px;
+    border-radius:5px;
+    
+  }
+  
+  .controls:hover{
+    background:white;
+    transition:0.3s;
+  }
+  
+  .controls:active{
+    color:grey;
+  }
+  
+  #left-arrow{
+    left:10px;
+  }
+  
+  #right-arrow{
+    right:10px;
+  }
+  
+  #dots-con{
+    
+    text-align:center;
+  }
+  .dot{
+    display:inline-block;
+    background:grey;
+    padding:8px;
+    border-radius:50%;
+    margin:10px 5px;
+  }
+  
+  .active{
+    background:crimson;
+  }
+  
+  @media (max-width:576px){
+    #slider{width:100%;
+    
+    }
+    
+    .controls{
+      font-size:1em;
+    }
+    
+    #dots-con{
+      display:none;
+    }
+  }
+ 

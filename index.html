@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>My Biography - Mae Kylla Navarro</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
+        <!-- Font Awesome Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+          <nav >
+            
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul>
+            <li><a href="#section1">Biography</a></li>
+            <li><a href="#section2">Skills</a></li>
+            <li><a href="#section3">Hobbies</a></li>
+            <li><a href="#section4">Reference</a></li>
+         </ul>
+     </nav>
+     
+<section id="section1">
+ <div id="picture">
+    <img width="300px" src="kyky.png">    
+    </div>
+    <h1>Mae Kylla Navarro</h1>
+    <h3>Photographer - Graphic Designer - Programmer</h3>
+    <p>Age: 20</p>
+    <p>Nickname: Kylla</p>
+    <p>Nationality: Filipino</p>
+    <p>Birthday: November 6, 2001</p>  
+      <div class="container">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a> 
+    </div>
+    </div>
+</section>
+  <section id="section2">
+    <h2>Skills</h2>
+    <div class="row rating"> <h4>Photography</h4>
+        <span class="fa fa-star checked" style="font-size:40px"></span>
+        <span class="fa fa-star checked" style="font-size:40px"></span>
+        <span class="fa fa-star checked"style="font-size:40px"></span>
+        <span class="fa fa-star" style="font-size:40px"></span>
+        <span class="fa fa-star" style="font-size:40px"></span>
+        </div>
+      <h4>Graphic Design</h4>
+      <div class="row rating">
+              <span class="fa fa-star checked" style="font-size:40px"></span>
+              <span class="fa fa-star checked" style="font-size:40px"></span>
+              <span class="fa fa-star checked"style="font-size:40px"></span>
+              <span class="fa fa-star" style="font-size:40px"></span>
+              <span class="fa fa-star" style="font-size:40px"></span>
+        </div>
+    <h4>Video Editing</h4>
+    <div class="row rating">
+<span class="fa fa-star checked" style="font-size:40px"></span>
+<span class="fa fa-star checked" style="font-size:40px"></span>
+<span class="fa fa-star"style="font-size:40px"></span>
+<span class="fa fa-star" style="font-size:40px"></span>
+<span class="fa fa-star" style="font-size:40px"></span>
+</div>
+  </section>
+  
+  <section id="section3">
+    <h2>Hobbies</h2>
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="reading1.jpg" alt="Mountains" style="width:100%">
+          <h3>Reading</h3>
+          <p>Reading is a temporary sweet escape from the reality for me. That's why I read and it's interesting, fun, and it makes my imagination goes ran out.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="guitar.jpg" alt="Lights" style="width:100%">
+          <h3>Play Guitar</h3>
+          <p>Playing guitar and singing is a way of expressing my emotions. Playing guitar reminds me of my past self the happy-go-lucky side of me.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="bike.jpg" alt="Nature" style="width:100%">
+          <h3>Biking</h3>
+          <p>To stay healthy, I do cycling around the place with my friend. It also helps me feel free from the negative thoughts, not minding anything.</p>
+      
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+        <img src="makeup.jpg" alt="Mountains" style="width:100%">
+          <h3>Make Up</h3>
+          <p>I usually do creative make up to ease my anxiety and stress. It's the way I want to express emotions through my art. Creativity is art.</p>
+          <p>It makes me feel good too.</p>
+        </div>
+      </div>
+  </section>
+
+  <section id="section4">
+    <h2>Reference</h2>
+     <!--Slider-->
+<div id="slider">  
+  <div class="slide" style="background:dodgerBlue;">
+    <img src="karen.png" width="100%">
+  </div>
+  
+  <div class="slide" style="background:coral;">
+     <img src="gela.png" width="100%" >
+  </div>
+ 
+  <div class="slide" style="background:crimson;">
+    <img src="becca.png" width="100%" >
+  </div>
+  
+  <!--Controlling arrows-->
+  <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+</span>
+  <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+</span>
+</div>
+  <div id="dots-con">
+ <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+ </div>
+ <script>
+   var slides = document.querySelectorAll(".slide");
+var dots = document.querySelectorAll(".dot");
+var index = 0;
+
+
+function prevSlide(n){
+  index+=n;
+  console.log("prevSlide is called");
+  changeSlide();
+}
+
+function nextSlide(n){
+  index+=n;
+  changeSlide();
+}
+
+changeSlide();
+
+function changeSlide(){
+    
+  if(index>slides.length-1)
+    index=0 
+  if(index<0)
+    index=slides.length-1; 
+    for(let i=0;i<slides.length;i++){
+      slides[i].style.display = "none";
+      
+      dots[i].classList.remove("active");   
+    }
+    
+    slides[index].style.display = "block";
+    dots[index].classList.add("active");
+}
+ </script>
+  </section>
+    </body>
+    </head>
+</html>
